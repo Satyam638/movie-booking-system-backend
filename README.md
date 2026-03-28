@@ -221,7 +221,68 @@ ADMIN
 CLIENT (THEATRE OWNER)
 USER (CUSTOMER)
 ```
+# 🔄 Movie Booking System Flowchart
 
+```mermaid
+flowchart TD
+
+A[User Request] --> B{Authentication Required?}
+
+B -->|No| C[Public APIs]
+B -->|Yes| D[Verify JWT]
+
+D -->|Valid| E{User Role}
+D -->|Invalid| X[Return Unauthorized]
+
+%% Roles
+E -->|Admin| F[Admin Actions]
+E -->|Client| G[Theatre Owner Actions]
+E -->|User| H[Customer Actions]
+
+%% Admin Flow
+F --> F1[Create Movie]
+F --> F2[Update Movie]
+F --> F3[Delete Movie]
+F --> F4[Approve Client]
+F --> F5[Get All Users]
+
+%% Client Flow
+G --> G1[Create Theatre]
+G --> G2[Update Theatre]
+G --> G3[Delete Theatre]
+G --> G4[Add Movies to Theatre]
+G --> G5[Create Show]
+G --> G6[Cancel Show]
+
+%% User Flow
+H --> H1[View Movies]
+H --> H2[Search Movies]
+H --> H3[View Theatres]
+H --> H4[View Shows]
+H --> H5[Create Booking]
+
+%% Booking Flow
+H5 --> I[Check Show Exists]
+I --> J[Fetch Booked Seats]
+J --> K{Seat Available?}
+
+K -->|No| L[Reject Booking]
+K -->|Yes| M[Create Booking IN_PROCESS]
+
+M --> N[Calculate Total Amount]
+N --> O[Save Booking]
+
+O --> P[Payment API]
+
+P --> Q{Payment Status}
+
+Q -->|Success| R[Update Booking BOOKED]
+Q -->|Failed| S[Update Booking REJECTED]
+
+R --> T[Return Booking Success]
+S --> U[Return Payment Failed]
+
+```
 ---
 # 📬 Future Improvements
 
