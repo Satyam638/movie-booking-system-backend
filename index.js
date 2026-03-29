@@ -9,10 +9,12 @@ const authRoutes = require('./routers/auth.route');
 const showbookingRoutes = require('./routers/showbooking.route');
 const showbookingPaymentRoutes = require('./routers/payment.route');
 const showRoutes = require('./routers/show.route');
+const cors = require('cors');
 const PORT = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 // middleware
+app.use(cors())
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}))
 mongoose.set('debug',true);
