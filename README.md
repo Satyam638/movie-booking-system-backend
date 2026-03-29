@@ -4,7 +4,7 @@ A production-style Movie Booking Backend built using **Node.js, Express, and Mon
 The system supports movie & theatre management, show scheduling, seat availability validation, booking workflow, and simulated payment processing.
 
 ---
-You can See the Demo of my Movie Booking System using https://movie-booking-system-backend-fzx0.onrender.com/ 
+You can See the Demo of my Movie Booking System using movie-booking-system-backend-production.up.railway.app
 
 # 🚀 Features
 
