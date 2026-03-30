@@ -4,7 +4,14 @@ A production-style Movie Booking Backend built using **Node.js, Express, and Mon
 The system supports movie & theatre management, show scheduling, seat availability validation, booking workflow, and simulated payment processing.
 
 ---
-You can See the Demo of my Movie Booking System using movie-booking-system-backend-production.up.railway.app
+You can See the Demo of my Movie Booking System using [movie-booking-system-backend-production.up.railway.app](url)
+
+## Interactive Swagger UI:
+[https://movie-booking-system-backend-production.up.railway.app/api-docs](url)
+
+- Protected endpoints require JWT token.
+- Use Swagger Authorize button or send header:
+- token: your_jwt_token
 
 # 🚀 Features
 
