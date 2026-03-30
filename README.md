@@ -7,6 +7,8 @@ The system supports movie & theatre management, show scheduling, seat availabili
 You can See the Demo of my Movie Booking System using [movie-booking-system-backend-production.up.railway.app](url)
 
 ## Interactive Swagger UI:
+<img width="1276" height="632" alt="image" src="https://github.com/user-attachments/assets/65e9adf6-9776-4015-b9a7-89b86ba5ee87" />
+
 [https://movie-booking-system-backend-production.up.railway.app/api-docs](url)
 
 - Protected endpoints require JWT token.
